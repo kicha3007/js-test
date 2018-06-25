@@ -1,0 +1,213 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-main-nav-2 {
+  overflow: hidden;
+}
+
+.it-main-nav-2__wrap {
+/*  overflow: hidden;
+  width: 100%;*/
+  //display: flex;
+  z-index: 1000;
+  margin: 0;
+ position: relative;
+  overflow-x: auto;
+}
+
+.it-main-nav-2__list {
+  display: flex;
+  z-index: 1000;
+  margin: 0;
+  //max-width: 500px;
+  overflow-x: auto;
+  //position: relative;
+  padding-left: 0;
+  @include laptop {
+    width: 450px;
+    padding: 5px 0;
+  }
+}
+
+.it-main-nav-2__list::-webkit-scrollbar {
+  width: 0 !important;
+  display: none !important;
+}
+
+.it-main-nav-2__list > li {
+  list-style-type: none;
+  position: relative;
+  background-color: transparent;
+  margin: 0 0;
+}
+
+.it-main-nav-2__list ul {
+  z-index: 1000;
+}
+
+.it-main-nav-2__list > li > a {
+  padding: 5px 36px 5px 0;
+  display: block;
+  font-size: rem(16px);
+  font-weight: 400;
+  color: #6D6D6D;
+  transition: .2s;
+}
+
+.it-main-nav-2__list > li:last-child > a {
+  padding-right: 0;
+}
+
+.it-main-nav-2__list > li  a {
+  text-decoration: none;
+}
+
+.it-main-nav-2__list > li > a:active,
+.it-main-nav-2__list > li.active > a,
+.it-main-nav-2__list > li:hover > a {
+  color: $main-color;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/*.it-main-nav-2__list > li > a:visited {
+  color: #6D6D6D;
+}*/
+
+.it-main-nav-2__list > li > ul,
+.it-main-nav-2__list > li > ul > li > ul {
+  margin: 0;
+  position: absolute;
+  /*opacity: 0;*/
+  transition: opacity .1s;
+  padding: 0;
+  background-color: #ffffff;
+}
+
+.it-main-nav-2__list > li > ul {
+  width: auto;
+  top: -1000px;
+  left: 0;
+  min-width: 312px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  z-index: 3111;
+}
+
+.it-main-nav-2__list > li > ul > li {
+  list-style-type: none;
+}
+
+.it-main-nav-2__list > li > ul > li > a,
+.it-main-nav-2__list > li > ul > li > ul > li > a {
+  list-style-type: none;
+  font-weight: 300;
+  font-size: .875rem;
+  color: rgba(0, 0, 0, .87);
+  display: block;
+}
+
+.it-main-nav-2__list > li > ul > li > a {
+  position: relative;
+  padding: 10px 40px 10px 20px;
+}
+
+.it-main-nav-2__list > li > ul > li.active > a,
+.it-main-nav-2__list > li > ul > li:hover > a {
+  background-color: #979797;
+  font-weight: 400;
+  text-decoration: none;
+  color: $main-color;
+}
+
+.it-main-nav-2__list > li > ul > li.active > a {
+  color: rgba(0, 0, 0, .87);
+}
+
+.it-main-nav-2__list > li:hover > ul {
+  top: 100%;
+  opacity: 1;
+
+}
+
+.it-main-nav-2__list > li > ul > li > ul {
+  top: -1100px;
+  left: 100%;
+  min-width: 312px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px 0;
+
+}
+
+.it-main-nav-2__list > li > ul > li > ul > li {
+  list-style-type: none;
+  padding-left: 20px;
+
+}
+
+.it-main-nav-2__list > li > ul > li > ul > li > a {
+  padding: 5px;
+}
+
+.it-main-nav-2__list > li > ul > li > ul > li:hover > a {
+  text-decoration: underline;
+  font-weight: 400;
+}
+
+.it-main-nav-2__list > li > ul > li > ul > li.active > a {
+  text-decoration: underline;
+  font-weight: 400;
+  color: $main-color;
+}
+
+.it-main-nav-2__list > li > ul > li > ul > li:hover > a {
+  color: $main-color;
+}
+
+.it-main-nav-2__list > li > ul > li:hover > ul {
+  top: 0;
+  opacity: 1;
+}
+
+.it-main-nav-2__list li a:first-child:nth-last-child(2):after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 8px;
+  top: 50%;
+  right: 18px;
+  margin-top: -4px;
+  transition: .2s;
+  background: url("../img/crypto/nav/arrow.png") center no-repeat;
+  @include phones {
+    display: none;
+
+  }
+}
+
+.it-main-nav-2__list > li:first-child:hover a,
+.it-main-nav-2__list > li:first-child.active a {
+  background: url('../img/nav/2.svg') no-repeat center center;
+}
+
+.it-main-nav-2__list li:hover > a:after {
+  transform: rotate(-90deg);
+  top: 45% !important;
+}
+
+
+
+.ps__rail-x,
+.ps__rail-y {
+  opacity: 1;
+  margin-bottom: 0 !important;
+}
+
+.ps__rail-x .ps__thumb-x {
+  border-radius: 0 !important;
+  bottom: 0 !important;
+  height: 3px;
+  background-color: $main-color;
+
+}
+

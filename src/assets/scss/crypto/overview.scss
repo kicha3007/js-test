@@ -1,0 +1,56 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-overview {
+  padding-bottom: 50px;
+  border-bottom: 1px solid #DEDEDE;
+  margin-top: -40px;
+}
+
+.it-overview__category-list {
+  margin: 0;
+  padding: 0;
+}
+
+.it-overview__category-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin-bottom: 10px;
+}
+
+.it-overview__category-key {
+  font-weight: 300;
+  font-size: rem(16px);
+  margin-right: 5px;
+}
+
+.it-overview__category-value {
+  font-size: rem(16px);
+  color: #1E1E1E;
+}
+
+.it-overview__link-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  max-width: 450px;
+  width: 100%;
+  margin: 0 -10px -10px;
+  overflow: hidden;
+}
+
+.it-overview__link-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 10px 10px;
+  min-width: 130px;
+
+}
+
+.it-overview a {
+  margin-right: 3px;
+}
+
+
+

@@ -1,0 +1,62 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+
+.it-social__list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 20px -12px 0;
+  overflow: hidden;
+}
+
+.it-social__item {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 12px 20px;
+  overflow: hidden;
+}
+
+.it-social__link {
+  max-width: 39px;
+  max-height: 30px;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+}
+
+.it-social__img-box {
+  width: 100%;
+  height: 100%;
+}
+
+.it-social__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: 0.2s;
+}
+
+.it-social__img-hov {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: block;
+  max-width: 100%;
+  height: auto;
+  transition: 0.2s;
+}
+
+.it-social__img-box:hover .it-social__img {
+  opacity: 0;
+}
+
+.it-social__img-box:hover .it-social__img-hov {
+  opacity: 1;
+}

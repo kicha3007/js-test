@@ -1,0 +1,93 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-sale-schedule {
+  overflow: hidden;
+  border-bottom: 1px solid #DEDEDE;
+}
+
+.it-sale-schedule__wrap {
+  position: relative;
+  margin-bottom: 25px;
+
+
+}
+
+.it-sale-schedule__table {
+  border-collapse: collapse;
+  //margin-bottom: 25px;
+
+}
+
+.it-sale-schedule__table::-webkit-scrollbar {
+ width: 0 !important;
+  display: none !important;
+
+}
+
+.it-sale-schedule__table td {
+  padding: 17px 12px;
+  @include laptop {
+    min-width: 180px;
+  }
+}
+
+.it-sale-schedule__table th {
+  padding: 5px 12px 17px;
+}
+
+.it-sale-schedule__table tr td:first-child {
+  border-left: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.it-sale-schedule__table tr:last-child {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+
+.it-sale-schedule__table tr td:last-child {
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.it-sale-schedule__table tr td:not(:first-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+
+}
+
+.it-sale-schedule__row th {
+  font-size: 15px;
+  color: #1E1E1E;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  font-weight: 400;
+  text-align: left;
+}
+
+.it-sale-schedule__table td {
+  font-size: 14px;
+  font-weight: 300;
+  color: #828282;
+}
+
+.it-sale-schedule__row---top td {
+  color: #333333;
+  font-weight: 400;
+}
+
+.it-sale-schedule__table td.active {
+  background-color: #4F4F4F;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.it-sale-schedule__row.active td {
+  background-color: #3EC7C6;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+
+
+

@@ -1,0 +1,88 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-filter-options__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.it-filter-options__title {
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #828282;
+  line-height: 1.5;
+}
+
+.it-filter-options__inner-wrap {
+  position: relative;
+  min-width: 60px;
+
+}
+
+.it-filter-options__list {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+  min-width: 60px;
+}
+
+
+.it-filter-options__list li {
+  list-style-type: none;
+  padding-left: 0;
+  padding-right: 23px;
+  background-color: #ffffff;
+  display: none;
+  font-size: 14px;
+  font-weight: 500;
+  color: #3EC7C6;
+  line-height: 1.5;
+
+}
+
+.it-filter-options__list li.active {
+  display: block;
+}
+
+
+//.it-filter-options__list li a {
+//
+//  text-decoration: none;
+//
+//}
+
+//.it-filter-options__list li a:hover {
+//    color: #3EC7C6;
+//	text-decoration: none;
+//}
+//
+//.it-filter-options__list li a:active,
+//.it-filter-options__list li a:visited {
+//  color: #3EC7C6;
+//	text-decoration: none;
+//}
+
+.it-filter-options__list:after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 8px;
+  top: 12px;
+  right: 5px;
+  margin-top: -4px;
+  transition: .2s;
+  background: url(../img/crypto/base/arrow.png) center no-repeat;
+  pointer-events: none;
+}
+
+
+.it-filter-options__list.active:after {
+  transform: rotate(-90deg);
+  top: 10px;
+}

@@ -1,0 +1,161 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+/******************* it-header *******************/
+
+.it-header {
+  margin-bottom: 40px;
+  height: 100%;
+  background-color: #ffffff;
+  @include phones {
+    margin-bottom: 20px;
+  }
+}
+
+.it-header.it-header--bg {
+  position: relative;
+}
+
+.it-header.it-header--bg .it-header__top-wrap {
+  width: 90%;
+  z-index: 1002;
+
+}
+
+.it-header.it-header--bg .it-header__bottom-wrap {
+  z-index: 1002;
+}
+
+
+#it-body--bg-shadow {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+    right: 0;
+    bottom: 0;
+	width: 100%;
+	height: 3000%;
+    z-index: 100;
+    background-color: rgba(51, 51, 51, 0.45);
+}
+
+.it-header__top-wrap {
+  padding: 29px 0;
+  background-color: #ffffff;
+  position: relative;
+  z-index: 1030;
+  border-bottom: 1px solid #DEDEDE;
+  @include phones {
+    padding: 0;
+
+  }
+}
+
+.it-header__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -20px 0;
+
+  @include phones {
+    padding: 9.5px 0;
+  }
+}
+
+.it-header__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 0 -20px 0;
+}
+
+.it-header__half {
+  margin: 0 20px 0;
+  word-wrap: break-word;
+
+}
+
+.it-header__half--left {
+  width: calc(33.33333% - 40px);
+
+  @include phones {
+    width: calc(100% - 40px);
+    padding-left: 75px;
+
+  }
+}
+
+.it-header__half--right {
+  width: calc(66.66667% - 40px);
+  @include phones {
+    width: calc(100% - 40px);
+  }
+
+}
+
+.it-logo {
+  display: inline-block;
+}
+
+.it-logo__img-box {
+  width: 100%;
+  min-width: 220px;
+  overflow: hidden;
+  max-height: 42px;
+}
+
+.it-logo__img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.it-logo__img--phone {
+  display: none;
+  @include phones {
+    display: block;
+  }
+}
+
+.it-logo__img--desktop {
+  @include phones {
+    display: none;
+  }
+}
+
+.it-header__bottom-wrap {
+  border-bottom: 1px solid #DEDEDE;
+  background-color: #ffffff;
+  padding: 8px  0;
+  @include phones {
+    padding: 0 0;
+  }
+}
+
+
+.it-header__bottom-wrap.it--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1001;
+}
+
+
+.it-header__half--size-1 {
+  width: calc(70% - 40px);
+  @include phones {
+    padding-left: 0;
+  }
+
+
+}
+
+.it-header__half--size-2 {
+ width: calc(30%  - 40px);
+
+}
+
+

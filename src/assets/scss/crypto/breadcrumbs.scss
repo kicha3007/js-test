@@ -1,0 +1,47 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+
+
+.it-breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  @include phones {
+    display: none;
+  }
+}
+
+.it-breadcrumbs a {
+  color: #4F4F4F;
+  font-size: 12px;
+  font-weight: 300;
+  text-decoration: none;
+  margin-right: 3px;
+}
+
+.it-breadcrumbs a:hover {
+  color: #4F4F4F;
+  text-decoration: none;
+}
+
+.it-breadcrumbs a:active,
+.it-breadcrumbs a:visited {
+  color: #4F4F4F;
+  text-decoration: none;
+}
+
+
+.it-breadcrumbs span {
+  color: #4F4F4F;
+  font-size: 12px;
+  display: inline-block;
+  margin-right: 3px;
+  font-weight: 300;
+}
+
+.it-breadcrumbs span:last-child {
+  margin-right: 0;
+}
+

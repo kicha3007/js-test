@@ -1,0 +1,76 @@
+doctype html
+html(lang="ru-RU")
+    head
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width", initial-scale=1)
+        title crypto
+        link(href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&subset=cyrillic', rel='stylesheet')
+        link(rel="stylesheet" type="text/css" href="assets/css/perfect-scrollbar.css" )
+        link(rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css" )
+        link(rel="stylesheet" type="text/css" href="assets/css/main.css" )
+    body
+        .it-main-page__wrapper
+            .it-main-page__content
+                include crypto/header
+                .it-container
+                    .it-main-page__inner-wrap
+                        aside.it-main-page__half.it-main-page__half--left
+                            include crypto/card
+                        .it-main-page__half.it-main-page__half--right
+                            include crypto/overview
+                            include crypto/token
+                            include crypto/sale-schedule
+                            include crypto/team
+                            include crypto/roadmap
+                            include crypto/activity
+        include crypto/footer
+        .it-seporator
+            |   Cryptocurrency
+        .it-main-page__wrapper
+            .it-main-page__content.it-main-page__content--bg
+                include crypto/сryptocurrency-header
+                include crypto/currency
+        include crypto/footer
+        .it-seporator
+            |   Simply Vital Health
+        //.it-main-page__wrapper
+        //    .it-main-page__content
+        //        include crypto/header
+        //        include crypto/article
+        //        include crypto/article-more
+        //        .it-container
+        //            .it-main-page__all-subtitle
+        //                |    Did you enjoy that? Why not share this article
+        //            include crypto/social
+        //        include crypto/guides
+        //include crypto/footer
+        //.it-main-page__wrapper
+        //    .it-main-page__content.it-main-page__content--bg-2.it-main-page__title-size
+        //        header.it-header(data-main-header)
+        //            .it-header__top-wrap(data-top-header)
+        //                .it-container
+        //                    .it-header__top
+        //                        .it-header__half.it-header__half--left
+        //                            a.it-logo(href='/')
+        //                                .it-logo__img-box
+        //                                    img.it-logo__img.it-logo__img--desktop(src='assets/img/crypto/header/logo.svg', alt='')
+        //                                    img.it-logo__img.it-logo__img--phone(src='assets/img/crypto/header/logo-phone.svg', alt='')
+        //                        .it-header__half.it-header__half--right
+        //                            include crypto/nav
+        //        include crypto/invest
+        //        include crypto/categories
+        //        include crypto/tranding
+        //        include crypto/guides
+        //        include crypto/order
+        //include crypto/footer
+
+        script(src='assets/js/jquery.min.js', type='text/javascript')
+        script(type='text/javascript', src='https://www.gstatic.com/charts/loader.js')
+        script(src='assets/js/perfect-scrollbar.js', type='text/javascript')
+        script(src='assets/js/owl.carousel.min.js', type='text/javascript')
+        script(src='assets/js/masonry.pkgd.min.js', type='text/javascript')
+        script(src='assets/js/sticky-kit.min.js', type='text/javascript')
+        script(src='assets/js/jQuery.succinct.min.js', type='text/javascript')
+        script(src='assets/js/article.js', type='text/javascript')
+        script(src='assets/js/ico.js', type='text/javascript')
+        script(src='assets/js/main.js', type='text/javascript')

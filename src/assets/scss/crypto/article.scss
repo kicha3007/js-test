@@ -1,0 +1,183 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-article {
+}
+
+.it-article__wrap {
+  @include row-flex();
+  border-bottom: 1px solid #DEDEDE ;
+  @include laptop {
+    border-bottom: none;
+  }
+}
+
+.it-article__half {
+  @include col();
+  @include size(6);
+  @include size-md(12);
+  margin-bottom: 40px;
+  @include laptop {
+    margin-bottom: 15px;
+  }
+}
+
+.it-article__half--right {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  @include laptop {
+    justify-content: center;
+  }
+}
+
+
+.it-article__under-title {
+  color: $main-color;
+  font-size: rem(18px);
+  font-weight: 500;
+  margin-bottom: 20px;
+  @include laptop {
+    margin-bottom: 15px;
+  }
+
+
+}
+
+.it-article__title {
+  font-weight: 700;
+  font-size: rem(42px);
+  color: #1E1E1E;
+  margin-bottom: 28px;
+  line-height: 1.2;
+  @include laptop {
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+
+}
+
+.it-article__desc {
+  font-size: rem(18px);
+  color: #4F4F4F;
+  margin-bottom: 40px;
+  @include laptop {
+    margin-bottom: 20px;
+  }
+}
+
+.it-article__desc--desktop {
+  @include laptop {
+    display: none;
+  }
+
+}
+
+.it-article__desc--mobile {
+  display: none;
+  @include laptop {
+    display: block;
+  }
+}
+
+.it-article__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -5px;
+
+}
+
+.it-article__bottom-half {
+  margin-bottom: 5px;
+  flex-grow: 1;
+  @include laptop {
+      flex-grow: 0;
+  }
+}
+
+.it-article__bottom-half--left {
+  @include laptop {
+    padding-right: 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+.it-article__bottom-half--right {
+  @include laptop {
+    padding-left: 10px;
+  }
+
+
+}
+
+.it-article__time {
+  padding-left: 30px;
+  position: relative;
+  @include laptop {
+    padding-left: 15px;
+  }
+
+}
+
+.it-article__time:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: -1px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+  @include laptop {
+    width: 10px;
+    height: 10px;
+    top: 4px;
+  }
+
+}
+
+.it-article__time--icon-1:before {
+  background: url("../img/crypto/article/time/1.svg") no-repeat center;
+  background-size: 100%;
+}
+
+.it-article__time--icon-2:before {
+  @include laptop {
+    background: url("../img/crypto/article/time/2.svg") no-repeat center;
+  }
+
+}
+
+
+.it-article__time-title {
+  font-weight: 300;
+  font-size: 15px;
+  color: #000000;
+  margin-right: 3px;
+  @include laptop {
+    display: none;
+  }
+}
+
+.it-article__time-value {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1E1E1E;
+  @include laptop {
+    font-size: 14px;
+  }
+}
+
+.it-article__img-box {
+  max-height: 330px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.it-article__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}

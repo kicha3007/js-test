@@ -1,0 +1,352 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+
+
+
+
+.it-filter__list {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -13px;
+  overflow: hidden;
+  align-items: flex-start;
+  @include tablets {
+    margin: 0 -5px;
+  }
+}
+
+
+.it-filter__item {
+  list-style-type: none;
+  background-color: transparent;
+  margin: 0 13px;
+
+@include tablets {
+  margin: 0 5px;
+}
+}
+
+
+.it-filter__list ul {
+  z-index: 1000;
+
+}
+
+.it-filter__trigger {
+  display: inline-block;
+  padding: 8px 30px;
+  font-size: 14px;
+  font-weight: 400;
+  color: $main-color;
+  transition: .2s;
+  border: 1px solid $main-color;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+  @include tablets {
+    padding: 8px 15px;
+  }
+
+}
+
+
+.it-filter__trigger:hover {
+  color: #ffffff;
+  font-weight: 400;
+  background-color:  $main-color;
+
+}
+
+.it-filter__checkbox-outer-wrap {
+  max-width: 295px;
+  width: 100%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  border: 1px solid #E5E5E5;
+  border-radius: 3px;
+  padding: 25px 25px ;
+}
+
+.it-filter__checkbox-outer-wrap--size {
+  max-width: 580px;
+}
+
+
+.it-filter__checkbox-wrap {
+  margin: 0;
+  padding: 0;
+}
+
+.it-filter__checkbox-wrap--height {
+  max-height: 380px;
+  overflow-x: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+
+}
+
+.it-filter__checkbox-item {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0 15px;
+}
+
+.it-filter__checkbox-wrap--height .it-filter__checkbox-item {
+  width: 50%;
+
+}
+
+
+/******************* checkbox *******************/
+
+
+.it-checkbox-wrap {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.it-checkbox {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  cursor: pointer;
+  text-align: left;
+  max-width: 250px;
+  width: 100%;
+  position: relative;
+  margin-bottom: 15px;
+
+}
+
+.it-checkbox__default {
+  width: .1px;
+  height: .1px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 0!important;
+  outline: 0!important;
+  background-color: transparent;
+}
+
+.it-checkbox__pseudo,
+.it-checkbox__pseudo:before {
+  display: block;
+  width: 20px;
+  height: 20px;
+
+}
+
+.it-checkbox__pseudo {
+  background-color: #fff;
+  border: 1px solid rgba(80,66,66,.2);
+  margin-right: 8px;
+  position: relative;
+  left: 0;
+  top: 0;
+  line-height: 17px;
+  border-radius: 2px;
+
+
+}
+
+.it-checkbox__pseudo:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  top: 0;
+  left: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #ffffff;
+  background: url("../img/crypto/filter/check.svg") no-repeat center;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -ms-transform: scale(.4);
+  -webkit-transform: scale(.4);
+  transform: scale(.4);
+  -webkit-transition: all .225s ease-in-out;
+  -o-transition: all .225s ease-in-out;
+  transition: all .225s ease-in-out;
+  cursor: pointer;
+}
+
+
+.it-checkbox__default:checked+.it-checkbox__pseudo:before {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  background-color: $main-color;
+
+}
+
+.it-checkbox__default:checked+.it-checkbox__pseudo {
+  border-color: $main-color;
+}
+
+.it-checkbox__text {
+  display: flex;
+  flex-wrap: wrap;
+
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.38);
+  font-weight: 300;
+  -ms-flex-preferred-size: 80px;
+  flex-basis: 75px;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+
+  @include phones {
+    word-wrap: break-word !important;
+  }
+}
+
+.it-checkbox__text span {
+  color: #333333;
+  font-size: 14px;
+}
+
+.it-checkbox__key {
+  margin-right: 3px;
+}
+
+.it-callback__checkbox-wrap {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 0 5px;
+}
+
+.it-checkbox--size {
+  max-width: 400px;
+}
+
+
+
+
+.it-filter__checkbox-trigger {
+  margin-bottom: 30px;
+}
+
+
+.it-filter__checkbox-trigger-text span {
+  color: #333333;
+  font-size: 14px;
+}
+
+
+
+.it-filter__checkbox-trigger-default {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+  margin: 10px 0 0 20px;
+}
+.it-filter__checkbox-trigger-text {
+  position: relative;
+  padding: 0 0 0 60px;
+  cursor: pointer;
+}
+.it-filter__checkbox-trigger-text:before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: 0;
+  width: 50px;
+  height: 26px;
+  border-radius: 13px;
+  background: #CDD1DA;
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2);
+  transition: .2s;
+}
+.it-filter__checkbox-trigger-text:after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  width: 22px;
+  height: 22px;
+  border-radius: 10px;
+  background: #FFF;
+  box-shadow: 0 2px 5px rgba(0,0,0,.3);
+  transition: .2s;
+}
+.it-filter__checkbox-trigger-default:checked + .it-filter__checkbox-trigger-text:before {
+  background: #9FD468;
+}
+.it-filter__checkbox-trigger-default:checked + .it-filter__checkbox-trigger-text:after {
+  left: 26px;
+}
+
+.it-filter__checkbox-trigger-default :focus + .it-filter__checkbox-trigger-text:before {
+  box-shadow: inset 0 2px 3px rgba(0,0,0,.2), 0 0 0 3px rgba(255,255,0,.7);
+}
+
+.it-filter__bottom {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.it-filter__bottom--line {
+  border-top: 1px solid #E5E5E5;
+}
+
+
+.it-filter__bottom-half {
+  width: 50%;
+}
+
+.it-filter__bottom-half--right {
+  text-align: right;
+}
+
+.it-filter__btn {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  user-select: none;
+  border: none;
+  padding: 5px 0;
+  font-size: 14px;
+  transition: all 0.2s;
+  background-color: transparent;
+  color: $main-color;
+  cursor: pointer;
+  text-decoration: underline;
+  border-radius: 3px;
+  position: relative;
+  letter-spacing: 1px;
+  @include phones {
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+    font-size: 12px;
+  }
+}
+
+.it-filter__btn:focus {
+  outline: none;
+}
+
+.it-filter__btn--clear {
+  color: #828282;
+}

@@ -1,0 +1,298 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-card {
+  background-color: #ffffff;
+  max-width: 363px;
+  z-index: 99999;
+  @include desktop {
+      position: static !important;
+      padding-bottom: 40px ;
+      z-index: 0 ;
+      max-width: 100% ;
+  }
+}
+
+.it-card__item {
+  padding: 30px 25px;
+  border: 1px solid #E5E5E5;
+}
+
+.it-card__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.it-card__top-half {
+  flex-grow: 1;
+}
+
+.it-card__top-half--left {
+  margin-right: 10px;
+}
+
+
+.it-card__top-half--right {
+  max-width: 224px;
+  width: 100%;
+}
+
+.it-card__img-box {
+  max-width: 62px;
+  max-height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  border: 1px solid #E0E0E0;
+}
+
+.it-card__img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.it-card__model-title {
+  color: #1E1E1E;
+  font-size: rem(19px);
+
+}
+
+.it-card__subtitle {
+  padding-left: 20px;
+  position: relative;
+  color: $main-color;
+}
+
+.it-card__subtitle:before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: 0;
+	width: 14px;
+	height: 14px;
+	background: url("../img/crypto/card/2.png") no-repeat center;
+}
+
+.it-card__center {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.it-card__center-half {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  width: 50%;
+  position: relative;
+}
+
+.it-card__center-half--left {
+  border-right: 1px solid #DEDEDE;
+  padding-right: 2%;
+
+}
+
+.it-card__center-half--right {
+  padding-left: 20px;
+}
+
+.it-card__center-content {
+
+  max-width: 70px;
+  width: 100%;
+}
+
+.it-card__diagram {
+  position: relative;
+  max-width: 58px;
+  max-height: 58px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  margin-right: 10px;
+}
+
+.it-card__diagram-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+
+
+.it-card__center-title {
+  color: #1E1E1E;
+  font-size: rem(18px);
+}
+
+.it-card__center-subtitle {
+  color: #6D6D6D;
+  font-size: 13px;
+  font-weight: 300;
+}
+
+.it-card__center-subtitle:hover {
+	color: #6D6D6D;
+	text-decoration: none;
+}
+
+.it-card__center-subtitle:active,
+.it-card__center-subtitle:visited {
+	color: #6D6D6D;
+	text-decoration: none;
+}
+
+.it-card__start {
+  color: #6D6D6D;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.it-card__start-date {
+  color: #1E1E1E;
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.it-card__end {
+  color: #6D6D6D;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.it-card__end-date {
+  font-size: 14px;
+  color: #1E1E1E;
+}
+
+.it-card__line-title,
+.it-card__line-title span {
+  color: #1E1E1E;
+  font-size: 14px;
+
+}
+
+.it-card__line-title {
+  margin-bottom: 10px;
+}
+
+.it-card__bottom {
+  margin-bottom: 40px;
+}
+
+.it-card__line {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 25px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.it-card__line-numeric,
+.it-card__line-numeric span {
+  color: #6D6D6D;
+  font-size: 12px;
+  position: relative;
+  z-index: 3;
+
+
+}
+
+.it-card__line-numeric {
+  padding: 8px 10px;
+}
+
+
+.it-card__inner-line {
+  width: 13%;
+  height: 100%;
+  background-color: $main-color;
+  transition: 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+}
+
+.it-card .it-card__link {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #6D6D6D;
+}
+
+
+.it-card.it--fixed {
+  position: fixed;
+
+
+
+}
+
+
+.it-card__buttons + .it-card__buttons {
+  margin-top: 10px;
+}
+
+/*******************  *******************/
+
+.it-card__rank-number {
+  font-size: rem(36px);
+  color: #3EC7C6;
+  font-weight: 500;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.it-card__rank-text {
+  color: #333333;
+  font-size: 16px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.it-card__rank-top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.it-card__rank-img-box {
+  max-width: 130px;
+  width: 100%;
+  height: 20px;
+
+}
+
+.it-card__goal {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.it-card__goal-wrap {
+  display: inline-flex;
+  flex-wrap: wrap;
+}
+
+.it-card__goal-text {
+  color: #6D6D6D;
+  font-size: rem(20px);
+  font-weight: 300;
+  margin-right: 7px;
+  text-transform: uppercase;
+}
+
+.it-card__goal-numeric {
+  color: #1E1E1E;
+  font-size: rem(20px);
+  font-weight: 500;
+}
+

@@ -1,0 +1,435 @@
+@import '__vars';
+@import '__mixins';
+@import "smart-grid";
+@import "base";
+
+/******************* crypto *******************/
+@import 'crypto/header';
+@import "crypto/nav";
+@import "crypto/nav2";
+@import "crypto/breadcrumbs";
+@import "crypto/card";
+@import "crypto/overview";
+@import "crypto/team";
+@import "crypto/token";
+@import "crypto/sale-schedule";
+@import "crypto/roadmap";
+@import "crypto/footer";
+@import "crypto/activity";
+@import "crypto/filter";
+@import "crypto/filter-options";
+@import "crypto/currency";
+@import "crypto/article";
+@import "crypto/article-more";
+@import "crypto/social";
+@import "crypto/guides";
+@import "crypto/invest";
+@import "crypto/categories";
+@import "crypto/tranding";
+@import "crypto/order";
+@import "crypto/chart";
+
+/******************* all-style *******************/
+
+
+
+
+.it-seporator  {
+  width: 100%;
+  background-color: $main-color;
+  color: #ffffff;
+  font-size: 46px;
+  text-align: center;
+  font-weight: 500;
+  padding: 100px 10px ;
+  position: relative;
+  z-index: 999999;
+}
+
+.it-all--indent {
+  margin-bottom: 80px;
+  @include laptop {
+    margin-bottom: 60px;
+  }
+  @include phones {
+    margin-bottom: 40px;
+  }
+}
+
+.it-all--top-indent {
+  margin-top: 80px;
+  @include laptop {
+    margin-top: 60px;
+  }
+  @include phones {
+    margin-top: 40px;
+  }
+}
+
+.it-main-page__half--right a {
+  text-decoration: underline;
+  color: #1E1E1E;
+}
+
+.it-main-page__half--right a:active,
+.it-main-page__half--right a:hover,
+.it-main-page__half--right a:visited {
+  color: $main-color;
+  text-decoration: underline;
+}
+
+.it-main-page__content p,
+.it-main-page__all-text,
+p {
+  color: #4F4F4F;
+  font-size: rem(16px);
+  padding: 0;
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+.it-main-page__all-title {
+  color: #1E1E1E;
+  font-size: rem(16px);
+  font-weight: 500;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.it-main-page__all-video {
+  margin-bottom: 20px;
+}
+
+.it-main-page__all-subtitle {
+  font-size: rem(20px);
+  margin-bottom: 10px;
+  font-weight: 500;
+  color: #1E1E1E;
+}
+
+.it-main-page__all-more,
+.it-main-page__all-more span {
+  color: #3EC7C6;
+  text-decoration: none !important;
+  font-size: rem(18px);
+  margin-bottom: 40px;
+  margin-top: 2px;
+  cursor: pointer;
+  position: relative;
+  padding-right: 23px;
+
+
+
+}
+
+.it-main-page__all-more {
+  display: block;
+}
+
+.it-main-page__all-more:hover {
+  color: #3EC7C6;
+  text-decoration: none !important;
+}
+
+.it-main-page__all-more:active,
+.it-main-page__all-more:visited {
+  color: #3EC7C6;
+  text-decoration: none !important;
+}
+
+.it-main-page__all-more-text:after {
+  position: absolute;
+  content: "";
+  width: 12px;
+  height: 8px;
+  top: 12px;
+  right: 0;
+  margin-top: -4px;
+  transition: .2s;
+  background: url("../img/crypto/base/arrow.png") center no-repeat;
+  @include phones {
+    top: auto;
+    bottom: 4px
+  }
+
+}
+
+.it-main-page__all-more.active .it-main-page__all-more-text:after {
+  transform: rotate(-180deg);
+}
+
+.it-main-page__content--bg {
+  background-color: #F2F2F2;
+}
+
+.it-main-page__content--bg-2 {
+  background-color: rgba(250, 248, 253, 1);
+  @include phones {
+    background-color: #ffffff;
+  }
+}
+
+
+/******************* it-all-style *******************/
+
+
+figure {
+  margin: 0 0 30px;
+}
+
+figure img {
+  margin-bottom: 10px;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+figcaption {
+  color: #828282;
+  font-size: 16px;
+}
+
+.it-article-more cite {
+  padding-left: 15px;
+  border-left: 3px solid $main-color ;
+  color: #1E1E1E;
+  font-size: 16px;
+  margin-bottom: 30px;
+  display: block;
+  max-width: 520px;
+}
+
+.it-container {
+  max-width: 1230px;
+  width: 100%;
+  padding: 0 30px;
+  margin: 0 auto;
+}
+
+.it-container--full {
+  @include phones {
+    max-width: 100%;
+    padding: 0;
+  }
+
+}
+
+.it-container * {
+  box-sizing: border-box;
+}
+
+.it-all-title {
+  margin-top: 35px;
+  margin-bottom: 15px;
+  font-size: rem(24px);
+  font-weight: 500;
+  color: #1E1E1E;
+  padding: 0;
+}
+
+
+.it-main-page__title-size .it-all-title {
+  font-size: rem(36px);
+  font-weight: 900;
+  color: #1E1E1E;
+  margin-top: 90px;
+  margin-bottom: 40px;
+  @include laptop {
+    margin-top: 70px;
+    margin-bottom: 35px;
+  }
+  @include phones {
+    margin-top: 40px;
+    margin-bottom: 25px;
+    font-size: 20px;
+    font-weight: 700;
+  }
+}
+
+.it-all-title.it-all-title--size {
+  font-size: rem(46px);
+  @include laptop {
+    font-size: 40px;
+  }
+  @include phones {
+    font-size: 24px;
+    font-weight: 900;
+  }
+}
+
+
+
+.it-all-title--container {
+  @include phones {
+    padding: 0 15px;
+  }
+
+}
+
+.it-link {
+  color: #333333;
+  font-size: rem(16px);
+  padding-left: 30px;
+  position: relative;
+  display: inline-block;
+  text-decoration: underline;
+}
+
+.it-link:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url("../img/crypto/base/link.png") no-repeat center;
+}
+
+.it-btn {
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  font-weight: 700;
+  line-height: 1.25;
+  text-align: center;
+  user-select: none;
+  border: none;
+  padding: 16.5px 10px;
+  font-size: 14px;
+  transition: all 0.2s;
+  background-color: $main-color;
+  color: #ffffff;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 3px;
+  position: relative;
+  letter-spacing: 1px;
+  @include phones {
+    padding-top: 11.5px;
+    padding-bottom: 11.5px;
+    font-size: 12px;
+  }
+}
+
+.it-btn:hover {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.it-btn:hover,
+.it-btn:active,
+.it-btn:visited {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.it-btn--transparent {
+  background-color: transparent;
+  color: $main-color;
+  border: 1px solid $main-color;
+  text-decoration: none;
+}
+
+.it-btn--transparent:active,
+.it-btn--transparent:visited {
+  color: $main-color;
+  text-decoration: none;
+}
+
+.it-btn--transparent:hover {
+  border: 1px solid $main-color;
+  color: #ffffff;
+  background-color: $main-color;
+  text-decoration: none;
+}
+
+.it-btn--all-transparent {
+  border: none;
+  background-color: transparent;
+  color: #3EC7C6;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.it-btn--all-transparent:hover {
+   color: #3EC7C6;
+	text-decoration: none;
+  box-shadow: none;
+}
+
+.it-btn--all-transparent:active,
+.it-btn--all-transparent:visited {
+   color: #3EC7C6;
+	text-decoration: none;
+  box-shadow: none;
+}
+
+.it-main-page__inner-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -20px;
+  margin-right: -20px;
+}
+
+.it-main-page__half--left {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(33.33333% - 40px);
+  position: relative;
+}
+
+.it-main-page__half--right {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 20px;
+  margin-right: 20px;
+  width: calc(66.66667% - 40px);
+  padding-bottom: 5%;
+}
+
+
+.it-hidden {
+  display: none;
+}
+
+/******************* media *******************/
+
+@media (max-width: 1200px) { /*desctop*/
+  .it-main-page__half {
+    width: calc(100% - 40px);
+  }
+}
+
+@media (max-width: 992px) { /*laptop*/
+  html {
+    font-size: 15px;
+  }
+
+  .it-container {
+    padding: 0 15px;
+  }
+}
+
+@media (max-width: 720px) { /* tablets*/
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 576px) { /*phones*/
+  html {
+    font-size: 13px;
+  }
+}
+
+.it-categories__arrow {
+  display: none;
+  order: 3;
+  @include phones {
+    display: block;
+  }
+}

@@ -1,0 +1,218 @@
+@import "../__vars";
+@import "../__mixins";
+@import "../smart-grid";
+
+.it-guides {
+}
+
+.it-guides__main-title {
+  font-size: rem(27px);
+  font-weight: 500;
+  margin-bottom: 30px;
+  color: #1E1E1E;
+}
+
+.it-guides__list {
+  padding: 0 0 30px;
+  @include clearfix;
+  margin-bottom: -20px;
+  overflow: hidden;
+}
+
+
+.it-guides__item {
+  list-style-type: none;
+  padding-left: 0;
+  float: left;
+  margin-bottom: 20px;
+  width: calc(33.333333% - 30px);
+  transition: 0.2s;
+  background-color: #ffffff;
+  @include laptop {
+    width: calc(50% - 30px);
+  }
+  @include phones {
+    width: 100% ;
+  }
+}
+
+.it-guides__item:hover .it-guides__title {
+  color: #3EC7C6;
+}
+
+
+.it-guides__item:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.it-guides .grid-sizer,
+.grid-item {
+
+}
+
+
+
+.it-guides__inner-item {
+  margin: 0 auto;
+  text-decoration: none;
+}
+
+.it-guides__inner-item:hover {
+	text-decoration: none;
+}
+
+.it-guides__inner-item:active,
+.it-guides__inner-item:visited {
+
+	text-decoration: none;
+}
+
+.it-guides__img-box {
+  height: 179px;
+  overflow: hidden;
+  display: block;
+  flex-grow: 1;
+  @include phones {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+}
+
+.it-guides__img {
+  display: block;
+  width: 100%;
+  height: auto;
+  @include phones {
+    max-width: 100%;
+    width: auto;
+
+  }
+
+}
+
+.it-guides__content {
+  padding: 18.5px 25px;
+  border: 1px solid #DEDEDE;
+  min-height: 150px;
+  flex-grow: 1;
+}
+
+.it-guides__title {
+  color: #1E1E1E;
+  font-size: rem(20px);
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: block;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.it-guides__title:hover {
+	color: #1E1E1E;
+	text-decoration: none;
+}
+
+.it-guides__title:active,
+.it-guides__title:visited {
+	color: #1E1E1E;
+	text-decoration: none;
+}
+
+.it-guides__desc {
+  color: #4F4F4F;
+  font-weight: 400;
+  font-size: 16px;
+  margin-bottom: 15px;
+  text-decoration: none;
+  display: block;
+
+}
+
+.it-guides__desc:hover {
+	color: #4F4F4F;
+	text-decoration: none;
+}
+
+.it-guides__desc:active,
+.it-guides__desc:visited {
+	color: #4F4F4F;
+	text-decoration: none;
+}
+
+
+.it-guides__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: -5px;
+  justify-content: space-between;
+
+}
+
+.it-guides__bottom-half {
+  margin-bottom: 5px;
+}
+
+
+.it-guides__time {
+  padding-left: 30px;
+  position: relative;
+  @include laptop {
+    padding-left: 15px;
+  }
+
+}
+
+.it-guides__time:before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: -1px;
+  left: 0;
+  width: 22px;
+  height: 22px;
+  background-size: 100%;
+  @include laptop {
+    width: 10px;
+    height: 10px;
+    top: 4px;
+  }
+
+}
+
+.it-article__time--icon-1:before {
+  background: url("../img/crypto/article/time/1.svg") no-repeat center;
+  background-size: 100%;
+}
+
+
+.it-guides__time-title {
+  font-weight: 300;
+  font-size: 15px;
+  color: #000000;
+  margin-right: 3px;
+}
+
+
+.it-guides__time-value {
+  font-weight: 700;
+  font-size: 15px;
+  color: #1E1E1E;
+  @include laptop {
+    font-size: 14px;
+  }
+}
+
+.it-guides__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  max-width: 230px;
+  width: 100%;
+  @include phones {
+    padding-left: 15px;
+    max-width: 180px;
+    margin: 0;
+  }
+}
